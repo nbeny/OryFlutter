@@ -7,12 +7,12 @@ import 'package:json_annotation/json_annotation.dart';
 /// the star denotes the source file name.
 /// run `flutter pub run build_runner build` to generate the file
 /// run `flutter pub run build_runner watch` to watch and regenerate if need
-part 'health_alive.g.dart';
+part 'model.g.dart';
 
 @JsonSerializable()
 class HealthAlive {
-  @JsonKey(defaultValue: 'false')
-  final String status;
+  @JsonKey(defaultValue: 'down')
+  String status;
 
   HealthAlive(this.status);
 

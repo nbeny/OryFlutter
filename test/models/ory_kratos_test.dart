@@ -1,6 +1,6 @@
 import 'dart:convert';
 
-import 'package:blog/ory_kratos/models/health_alive.dart';
+import 'package:blog/ory_kratos/health_alive/model.dart';
 import 'package:test/test.dart';
 
 void main() {

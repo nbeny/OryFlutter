@@ -1,6 +1,6 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND
 
-part of 'health_alive.dart';
+part of 'model.dart';
 
 // **************************************************************************
 // JsonSerializableGenerator
@@ -8,7 +8,7 @@ part of 'health_alive.dart';
 
 HealthAlive _$HealthAliveFromJson(Map<String, dynamic> json) {
   return HealthAlive(
-    json['status'] as String? ?? 'false',
+    json['status'] as String? ?? 'down',
   );
 }
 
