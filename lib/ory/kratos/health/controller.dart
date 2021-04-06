@@ -12,7 +12,6 @@ class HealthAliveController extends GetxController {
   void onInit() {
     fetchHealthAlive();
     super.onInit();
-    print(healthAlive);
   }
 
   void fetchHealthAlive() async {
@@ -22,7 +21,31 @@ class HealthAliveController extends GetxController {
       if (result != null) {
         healthAlive = result.obs;
       }
-      print(healthAlive);
+    } catch (e) {
+      throw Exception(e);
+    } finally {
+      isLoading(false);
+    }
+  }
+}
+
+class HealthReadyController extends GetxController {
+  RxBool isLoading = true.obs;
+  Rx<HealthReady> healthReady = HealthReady('down').obs;
+
+  @override
+  void onInit() {
+    fetchHealthReady();
+    super.onInit();
+  }
+
+  void fetchHealthReady() async {
+    try {
+      isLoading(true);
+      HealthReady? result = await HealthReadyService.getHealthReady();
+      if (result != null) {
+        healthReady = result.obs;
+      }
     } catch (e) {
       throw Exception(e);
     } finally {

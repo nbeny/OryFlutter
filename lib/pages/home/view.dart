@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
-import 'package:blog/ory/kratos/health_alive/view.dart';
+import 'package:blog/ory/kratos/health/view.dart';
 import 'controller.dart';
 
 class HomePage extends GetView<HomeController> {
@@ -17,7 +17,7 @@ class HomePage extends GetView<HomeController> {
         backgroundColor: Colors.white,
       ),
       body: Container(
-        child: HealthAliveView(),
+        child: HealthView(),
       ),
     );
   }
