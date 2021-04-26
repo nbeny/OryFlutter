@@ -145,3 +145,17 @@ Map<String, dynamic> _$ProviderToJson(Provider instance) => <String, dynamic>{
       'type': instance.type,
       'value': instance.value,
     };
+
+Session _$SessionFromJson(Map<String, dynamic> json) {
+  return Session(
+    json['csrf_token'] as String,
+    json['identifier'] as String,
+    json['password'] as String,
+  );
+}
+
+Map<String, dynamic> _$SessionToJson(Session instance) => <String, dynamic>{
+      'csrf_token': instance.csrf_token,
+      'identifier': instance.identifier,
+      'password': instance.password,
+    };

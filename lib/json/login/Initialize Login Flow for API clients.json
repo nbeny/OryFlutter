@@ -1,0 +1,121 @@
+{
+    "active": "string",
+    "expires_at": "2019-08-24T14:15:22Z",
+    "forced": true,
+    "id": "string",
+    "issued_at": "2019-08-24T14:15:22Z",
+    "messages": [
+      {
+        "context": {},
+        "id": 0,
+        "text": "string",
+        "type": "string"
+      }
+    ],
+    "methods": {
+      "property1": {
+        "config": {
+          "action": "string",
+          "fields": [
+            {
+              "disabled": true,
+              "messages": [
+                {
+                  "context": {},
+                  "id": 0,
+                  "text": "string",
+                  "type": "string"
+                }
+              ],
+              "name": "string",
+              "pattern": "string",
+              "required": true,
+              "type": "string",
+              "value": {}
+            }
+          ],
+          "messages": [
+            {
+              "context": {},
+              "id": 0,
+              "text": "string",
+              "type": "string"
+            }
+          ],
+          "method": "string",
+          "providers": [
+            {
+              "disabled": true,
+              "messages": [
+                {
+                  "context": {},
+                  "id": 0,
+                  "text": "string",
+                  "type": "string"
+                }
+              ],
+              "name": "string",
+              "pattern": "string",
+              "required": true,
+              "type": "string",
+              "value": {}
+            }
+          ]
+        },
+        "method": "string"
+      },
+      "property2": {
+        "config": {
+          "action": "string",
+          "fields": [
+            {
+              "disabled": true,
+              "messages": [
+                {
+                  "context": {},
+                  "id": 0,
+                  "text": "string",
+                  "type": "string"
+                }
+              ],
+              "name": "string",
+              "pattern": "string",
+              "required": true,
+              "type": "string",
+              "value": {}
+            }
+          ],
+          "messages": [
+            {
+              "context": {},
+              "id": 0,
+              "text": "string",
+              "type": "string"
+            }
+          ],
+          "method": "string",
+          "providers": [
+            {
+              "disabled": true,
+              "messages": [
+                {
+                  "context": {},
+                  "id": 0,
+                  "text": "string",
+                  "type": "string"
+                }
+              ],
+              "name": "string",
+              "pattern": "string",
+              "required": true,
+              "type": "string",
+              "value": {}
+            }
+          ]
+        },
+        "method": "string"
+      }
+    },
+    "request_url": "string",
+    "type": "string"
+}

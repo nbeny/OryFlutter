@@ -1,0 +1,108 @@
+{
+    "active": "string",
+    "expires_at": "2019-08-24T14:15:22Z",
+    "id": "string",
+    "identity": {
+      "id": "string",
+      "recovery_addresses": [
+        {
+          "id": "string",
+          "value": "string",
+          "via": "string"
+        }
+      ],
+      "schema_id": "string",
+      "schema_url": "string",
+      "traits": {},
+      "verifiable_addresses": [
+        {
+          "id": "string",
+          "status": "string",
+          "value": "string",
+          "verified": true,
+          "verified_at": "2019-08-24T14:15:22Z",
+          "via": "string"
+        }
+      ]
+    },
+    "issued_at": "2019-08-24T14:15:22Z",
+    "messages": [
+      {
+        "context": {},
+        "id": 0,
+        "text": "string",
+        "type": "string"
+      }
+    ],
+    "methods": {
+      "property1": {
+        "config": {
+          "action": "string",
+          "fields": [
+            {
+              "disabled": true,
+              "messages": [
+                {
+                  "context": {},
+                  "id": 0,
+                  "text": "string",
+                  "type": "string"
+                }
+              ],
+              "name": "string",
+              "pattern": "string",
+              "required": true,
+              "type": "string",
+              "value": {}
+            }
+          ],
+          "messages": [
+            {
+              "context": {},
+              "id": 0,
+              "text": "string",
+              "type": "string"
+            }
+          ],
+          "method": "string"
+        },
+        "method": "string"
+      },
+      "property2": {
+        "config": {
+          "action": "string",
+          "fields": [
+            {
+              "disabled": true,
+              "messages": [
+                {
+                  "context": {},
+                  "id": 0,
+                  "text": "string",
+                  "type": "string"
+                }
+              ],
+              "name": "string",
+              "pattern": "string",
+              "required": true,
+              "type": "string",
+              "value": {}
+            }
+          ],
+          "messages": [
+            {
+              "context": {},
+              "id": 0,
+              "text": "string",
+              "type": "string"
+            }
+          ],
+          "method": "string"
+        },
+        "method": "string"
+      }
+    },
+    "request_url": "string",
+    "state": "string",
+    "type": "string"
+}

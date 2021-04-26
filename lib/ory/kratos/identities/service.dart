@@ -8,7 +8,7 @@ import 'package:blog/ory/kratos/identities/model.dart';
 class IdentitiesService {
   static final client = http.Client();
 
-  static Future<ListIdentities?> getListIdentities() async {
+  static Future<Identities?> getIdentities() async {
     Uri uri = Uri.parse(Ory.HTTP + Ory.URI_ORI_KRATOS + '/identities');
     final response = await client.get(
       uri,
@@ -18,7 +18,7 @@ class IdentitiesService {
     try {
       if (response.statusCode == 200) {
         Map<String, dynamic> listIdentitiesMap = jsonDecode(response.body);
-        return ListIdentities.fromJson(listIdentitiesMap);
+        return Identities.fromJson(listIdentitiesMap);
       }
       return null;
     } catch (e) {
@@ -26,7 +26,7 @@ class IdentitiesService {
     }
   }
 
-  static Future<Identities?> getIdentities(String id) async {
+  static Future<Identitie?> getIdentitie(String id) async {
     Uri uri = Uri.parse(Ory.HTTP + Ory.URI_ORI_KRATOS + '/identities/' + id);
     final response = await client.get(
       uri,
@@ -36,14 +36,14 @@ class IdentitiesService {
     try {
       if (response.statusCode == 200) {
         Map<String, dynamic> identitiesMap = jsonDecode(response.body);
-        return Identities.fromJson(identitiesMap);
+        return Identitie.fromJson(identitiesMap);
       }
     } catch (e) {
       throw Exception(e);
     }
   }
 
-  static Future<Identities?> postIdentities(
+  static Future<Identitie?> postIdentitie(
       String id, Map<String, String> body) async {
     Uri uri = Uri.parse(Ory.HTTP + Ory.URI_ORI_KRATOS + '/identities/' + id);
     final response = await client.post(
@@ -55,7 +55,7 @@ class IdentitiesService {
     try {
       if (response.statusCode == 201) {
         Map<String, dynamic> identitiesMap = jsonDecode(response.body);
-        return Identities.fromJson(identitiesMap);
+        return Identitie.fromJson(identitiesMap);
       }
       return null;
     } catch (e) {
@@ -63,7 +63,7 @@ class IdentitiesService {
     }
   }
 
-  static Future<Identities?> putIdentities(
+  static Future<Identitie?> putIdentitie(
       String id, Map<String, String> body) async {
     Uri uri = Uri.parse(Ory.HTTP + Ory.URI_ORI_KRATOS + '/identities/' + id);
     final response = await client.put(
@@ -75,14 +75,14 @@ class IdentitiesService {
     try {
       if (response.statusCode == 200) {
         Map<String, dynamic> identitiesMap = jsonDecode(response.body);
-        return Identities.fromJson(identitiesMap);
+        return Identitie.fromJson(identitiesMap);
       }
     } catch (e) {
       throw Exception(e);
     }
   }
 
-  static Future<String> deleteIdentities(String id) async {
+  static Future<String> deleteIdentitie(String id) async {
     Uri uri = Uri.parse(Ory.HTTP + Ory.URI_ORI_KRATOS + '/identities/' + id);
     final response = await client.delete(
       uri,
