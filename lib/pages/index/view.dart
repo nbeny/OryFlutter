@@ -1,3 +1,4 @@
+import 'package:blog/pages/history/view.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
@@ -5,7 +6,7 @@ import 'package:get/get.dart';
 import 'package:blog/pages/account/view.dart';
 import 'package:blog/pages/alerts/view.dart';
 import 'package:blog/pages/home/view.dart';
-import 'package:blog/pages/news/view.dart';
+import 'package:blog/pages/blog/view.dart';
 
 import 'controller.dart';
 
@@ -20,9 +21,10 @@ class IndexPage extends StatelessWidget {
               index: controller.tabIndex,
               children: [
                 HomePage(),
-                NewsPage(),
+                BlogPage(),
                 AlertsPage(),
                 AccountPage(),
+                HistoryPage(),
               ],
             ),
           ),
@@ -38,20 +40,24 @@ class IndexPage extends StatelessWidget {
             elevation: 0,
             items: [
               _bottomNavigationBarItem(
-                icon: CupertinoIcons.home,
+                icon: CupertinoIcons.house_fill,
                 label: 'Home',
               ),
               _bottomNavigationBarItem(
-                icon: CupertinoIcons.sportscourt,
-                label: 'News',
+                icon: CupertinoIcons.book_fill,
+                label: 'Blog',
               ),
               _bottomNavigationBarItem(
-                icon: CupertinoIcons.bell,
+                icon: CupertinoIcons.flag_fill,
                 label: 'Alerts',
               ),
               _bottomNavigationBarItem(
                 icon: CupertinoIcons.person,
                 label: 'Account',
+              ),
+              _bottomNavigationBarItem(
+                icon: CupertinoIcons.archivebox_fill,
+                label: 'History',
               ),
             ],
           ),

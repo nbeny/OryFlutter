@@ -6,21 +6,21 @@ part of 'model.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-ListIdentities _$ListIdentitiesFromJson(Map<String, dynamic> json) {
-  return ListIdentities(
+Identities _$IdentitiesFromJson(Map<String, dynamic> json) {
+  return Identities(
     (json['identities'] as List<dynamic>)
-        .map((e) => Identities.fromJson(e as Map<String, dynamic>))
+        .map((e) => Identitie.fromJson(e as Map<String, dynamic>))
         .toList(),
   );
 }
 
-Map<String, dynamic> _$ListIdentitiesToJson(ListIdentities instance) =>
+Map<String, dynamic> _$IdentitiesToJson(Identities instance) =>
     <String, dynamic>{
       'identities': instance.identities,
     };
 
-Identities _$IdentitiesFromJson(Map<String, dynamic> json) {
-  return Identities(
+Identitie _$IdentitieFromJson(Map<String, dynamic> json) {
+  return Identitie(
     json['id'] as String,
     (json['recoveryAddresses'] as List<dynamic>)
         .map((e) => RecoveryAddress.fromJson(e as Map<String, dynamic>))
@@ -34,8 +34,7 @@ Identities _$IdentitiesFromJson(Map<String, dynamic> json) {
   );
 }
 
-Map<String, dynamic> _$IdentitiesToJson(Identities instance) =>
-    <String, dynamic>{
+Map<String, dynamic> _$IdentitieToJson(Identitie instance) => <String, dynamic>{
       'id': instance.id,
       'recoveryAddresses': instance.recoveryAddresses,
       'schemaId': instance.schemaId,

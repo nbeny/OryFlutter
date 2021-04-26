@@ -3,34 +3,10 @@ import 'package:json_annotation/json_annotation.dart';
 part 'model.g.dart';
 
 @JsonSerializable()
-class ListIdentities {
-  List<Identities> identities;
-
-  ListIdentities(this.identities);
-
-  /// A necessary factory constructor for creating a new ListIdentities instance
-  /// from a map. Pass the map to the generated `_$ListIdentitiesToJson()` constructor.
-  /// The constructor is named after the source class, in this case, ListIdentities.
-  factory ListIdentities.fromJson(Map<String, dynamic> json) =>
-      _$ListIdentitiesFromJson(json);
-
-  /// `toJson` is the convention for a class to declare support for serialization
-  /// to JSON. The implementation simply calls the private, generated
-  /// helper method `_$ListIdentitiesToJson`.
-  Map<String, dynamic> toJson() => _$ListIdentitiesToJson(this);
-}
-
-@JsonSerializable()
 class Identities {
-  String id;
-  List<RecoveryAddress> recoveryAddresses;
-  String schemaId;
-  String schemaUrl;
-  Object traits;
-  List<VerifiableAddress> verifiableAddresses;
+  List<Identitie> identities;
 
-  Identities(this.id, this.recoveryAddresses, this.schemaId, this.schemaUrl,
-      this.traits, this.verifiableAddresses);
+  Identities(this.identities);
 
   /// A necessary factory constructor for creating a new Identities instance
   /// from a map. Pass the map to the generated `_$IdentitiesToJson()` constructor.
@@ -42,6 +18,30 @@ class Identities {
   /// to JSON. The implementation simply calls the private, generated
   /// helper method `_$IdentitiesToJson`.
   Map<String, dynamic> toJson() => _$IdentitiesToJson(this);
+}
+
+@JsonSerializable()
+class Identitie {
+  String id;
+  List<RecoveryAddress> recoveryAddresses;
+  String schemaId;
+  String schemaUrl;
+  Object traits;
+  List<VerifiableAddress> verifiableAddresses;
+
+  Identitie(this.id, this.recoveryAddresses, this.schemaId, this.schemaUrl,
+      this.traits, this.verifiableAddresses);
+
+  /// A necessary factory constructor for creating a new Identitie instance
+  /// from a map. Pass the map to the generated `_$IdentitieToJson()` constructor.
+  /// The constructor is named after the source class, in this case, Identitie.
+  factory Identitie.fromJson(Map<String, dynamic> json) =>
+      _$IdentitieFromJson(json);
+
+  /// `toJson` is the convention for a class to declare support for serialization
+  /// to JSON. The implementation simply calls the private, generated
+  /// helper method `_$IdentitieToJson`.
+  Map<String, dynamic> toJson() => _$IdentitieToJson(this);
 }
 
 @JsonSerializable()
