@@ -3,6 +3,7 @@ import 'package:blog/pages/account/view.dart';
 import 'package:blog/pages/alerts/view.dart';
 import 'package:blog/pages/home/view.dart';
 import 'package:blog/pages/blog/view.dart';
+import 'package:blog/pages/history/view.dart';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:get/get.dart';
 import 'package:get_test/get_test.dart';

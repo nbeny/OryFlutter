@@ -1,120 +1,46 @@
 {
-    "active": "string",
-    "expires_at": "2019-08-24T14:15:22Z",
-    "id": "string",
-    "issued_at": "2019-08-24T14:15:22Z",
-    "messages": [
-      {
-        "context": {},
-        "id": 0,
-        "text": "string",
-        "type": "string"
+  "id": "9d5b91d8-b5c6-4ae3-8fa5-d2672aa83e63",
+  "type": "api",
+  "expires_at": "2021-04-27T13:23:10.025745873Z",
+  "issued_at": "2021-04-27T13:13:10.025745873Z",
+  "request_url": "http://127.0.0.1:4433/self-service/registration/api",
+  "messages": null,
+  "methods": {
+    "password": {
+      "method": "password",
+      "config": {
+        "action": "http://127.0.0.1:4433/self-service/registration/methods/password?flow=9d5b91d8-b5c6-4ae3-8fa5-d2672aa83e63",
+        "method": "POST",
+        "fields": [
+          {
+            "name": "csrf_token",
+            "type": "hidden",
+            "required": true,
+            "value": ""
+          },
+          {
+            "name": "password",
+            "type": "password",
+            "required": true
+          },
+          {
+            "name": "traits.email",
+            "type": "email"
+          },
+          {
+            "name": "traits.username",
+            "type": "text"
+          },
+          {
+            "name": "traits.name.first",
+            "type": "text"
+          },
+          {
+            "name": "traits.name.last",
+            "type": "text"
+          }
+        ]
       }
-    ],
-    "methods": {
-      "property1": {
-        "config": {
-          "action": "string",
-          "fields": [
-            {
-              "disabled": true,
-              "messages": [
-                {
-                  "context": {},
-                  "id": 0,
-                  "text": "string",
-                  "type": "string"
-                }
-              ],
-              "name": "string",
-              "pattern": "string",
-              "required": true,
-              "type": "string",
-              "value": {}
-            }
-          ],
-          "messages": [
-            {
-              "context": {},
-              "id": 0,
-              "text": "string",
-              "type": "string"
-            }
-          ],
-          "method": "string",
-          "providers": [
-            {
-              "disabled": true,
-              "messages": [
-                {
-                  "context": {},
-                  "id": 0,
-                  "text": "string",
-                  "type": "string"
-                }
-              ],
-              "name": "string",
-              "pattern": "string",
-              "required": true,
-              "type": "string",
-              "value": {}
-            }
-          ]
-        },
-        "method": "string"
-      },
-      "property2": {
-        "config": {
-          "action": "string",
-          "fields": [
-            {
-              "disabled": true,
-              "messages": [
-                {
-                  "context": {},
-                  "id": 0,
-                  "text": "string",
-                  "type": "string"
-                }
-              ],
-              "name": "string",
-              "pattern": "string",
-              "required": true,
-              "type": "string",
-              "value": {}
-            }
-          ],
-          "messages": [
-            {
-              "context": {},
-              "id": 0,
-              "text": "string",
-              "type": "string"
-            }
-          ],
-          "method": "string",
-          "providers": [
-            {
-              "disabled": true,
-              "messages": [
-                {
-                  "context": {},
-                  "id": 0,
-                  "text": "string",
-                  "type": "string"
-                }
-              ],
-              "name": "string",
-              "pattern": "string",
-              "required": true,
-              "type": "string",
-              "value": {}
-            }
-          ]
-        },
-        "method": "string"
-      }
-    },
-    "request_url": "string",
-    "type": "string"
+    }
+  }
 }
