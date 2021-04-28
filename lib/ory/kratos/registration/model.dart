@@ -11,13 +11,13 @@ part 'model.g.dart';
 @JsonSerializable()
 class InitRegistration {
   String id;
-  String type;
-  DateTime expired_at;
-  DateTime issued_at;
-  String request_url;
+  String? type;
+  DateTime? expired_at;
+  DateTime? issued_at;
+  String? request_url;
   @JsonKey(defaultValue: null)
   List<Object>? messages;
-  Object methods;
+  Methods methods;
 
   InitRegistration(this.id, this.type, this.expired_at, this.issued_at,
       this.request_url, this.messages, this.methods);
@@ -54,102 +54,102 @@ class Registration {
   Map<String, dynamic> toJson() => _$RegistrationToJson(this);
 }
 
-// @JsonSerializable()
-// class Message {
-//   Object context;
-//   String id;
-//   String text;
-//   String type;
+@JsonSerializable()
+class Message {
+  Object context;
+  String id;
+  String text;
+  String type;
 
-//   Message(this.context, this.id, this.text, this.type);
+  Message(this.context, this.id, this.text, this.type);
 
-//   /// A necessary factory constructor for creating a new Message instance
-//   /// from a map. Pass the map to the generated `_$MessageToJson()` constructor.
-//   /// The constructor is named after the source class, in this case, Message.
-//   factory Message.fromJson(Map<String, dynamic> json) =>
-//       _$MessageFromJson(json);
+  /// A necessary factory constructor for creating a new Message instance
+  /// from a map. Pass the map to the generated `_$MessageToJson()` constructor.
+  /// The constructor is named after the source class, in this case, Message.
+  factory Message.fromJson(Map<String, dynamic> json) =>
+      _$MessageFromJson(json);
 
-//   /// `toJson` is the convention for a class to declare support for serialization
-//   /// to JSON. The implementation simply calls the private, generated
-//   /// helper method `_$MessageToJson`.
-//   Map<String, dynamic> toJson() => _$MessageToJson(this);
-// }
+  /// `toJson` is the convention for a class to declare support for serialization
+  /// to JSON. The implementation simply calls the private, generated
+  /// helper method `_$MessageToJson`.
+  Map<String, dynamic> toJson() => _$MessageToJson(this);
+}
 
-// @JsonSerializable()
-// class Methods {
-//   Password password;
+@JsonSerializable()
+class Methods {
+  Password password;
 
-//   Methods(this.password);
+  Methods(this.password);
 
-//   /// A necessary factory constructor for creating a new Methods instance
-//   /// from a map. Pass the map to the generated `_$MethodsToJson()` constructor.
-//   /// The constructor is named after the source class, in this case, Methods.
-//   factory Methods.fromJson(Map<String, dynamic> json) =>
-//       _$MethodsFromJson(json);
+  /// A necessary factory constructor for creating a new Methods instance
+  /// from a map. Pass the map to the generated `_$MethodsToJson()` constructor.
+  /// The constructor is named after the source class, in this case, Methods.
+  factory Methods.fromJson(Map<String, dynamic> json) =>
+      _$MethodsFromJson(json);
 
-//   /// `toJson` is the convention for a class to declare support for serialization
-//   /// to JSON. The implementation simply calls the private, generated
-//   /// helper method `_$MethodsToJson`.
-//   Map<String, dynamic> toJson() => _$MethodsToJson(this);
-// }
+  /// `toJson` is the convention for a class to declare support for serialization
+  /// to JSON. The implementation simply calls the private, generated
+  /// helper method `_$MethodsToJson`.
+  Map<String, dynamic> toJson() => _$MethodsToJson(this);
+}
 
-// @JsonSerializable()
-// class Password {
-//   String method;
-//   Config config;
+@JsonSerializable()
+class Password {
+  String method;
+  Config config;
 
-//   Password(this.method, this.config);
+  Password(this.method, this.config);
 
-//   /// A necessary factory constructor for creating a new Password instance
-//   /// from a map. Pass the map to the generated `_$PasswordToJson()` constructor.
-//   /// The constructor is named after the source class, in this case, Password.
-//   factory Password.fromJson(Map<String, dynamic> json) =>
-//       _$PasswordFromJson(json);
+  /// A necessary factory constructor for creating a new Password instance
+  /// from a map. Pass the map to the generated `_$PasswordToJson()` constructor.
+  /// The constructor is named after the source class, in this case, Password.
+  factory Password.fromJson(Map<String, dynamic> json) =>
+      _$PasswordFromJson(json);
 
-//   /// `toJson` is the convention for a class to declare support for serialization
-//   /// to JSON. The implementation simply calls the private, generated
-//   /// helper method `_$PasswordToJson`.
-//   Map<String, dynamic> toJson() => _$PasswordToJson(this);
-// }
+  /// `toJson` is the convention for a class to declare support for serialization
+  /// to JSON. The implementation simply calls the private, generated
+  /// helper method `_$PasswordToJson`.
+  Map<String, dynamic> toJson() => _$PasswordToJson(this);
+}
 
-// @JsonSerializable()
-// class Config {
-//   String action;
-//   String method;
-//   List<Field> field;
+@JsonSerializable()
+class Config {
+  String action;
+  String method;
+  List<Field>? field;
 
-//   Config(this.action, this.method, this.field);
+  Config(this.action, this.method, this.field);
 
-//   /// A necessary factory constructor for creating a new Config instance
-//   /// from a map. Pass the map to the generated `_$ConfigToJson()` constructor.
-//   /// The constructor is named after the source class, in this case, Config.
-//   factory Config.fromJson(Map<String, dynamic> json) => _$ConfigFromJson(json);
+  /// A necessary factory constructor for creating a new Config instance
+  /// from a map. Pass the map to the generated `_$ConfigToJson()` constructor.
+  /// The constructor is named after the source class, in this case, Config.
+  factory Config.fromJson(Map<String, dynamic> json) => _$ConfigFromJson(json);
 
-//   /// `toJson` is the convention for a class to declare support for serialization
-//   /// to JSON. The implementation simply calls the private, generated
-//   /// helper method `_$ConfigToJson`.
-//   Map<String, dynamic> toJson() => _$ConfigToJson(this);
-// }
+  /// `toJson` is the convention for a class to declare support for serialization
+  /// to JSON. The implementation simply calls the private, generated
+  /// helper method `_$ConfigToJson`.
+  Map<String, dynamic> toJson() => _$ConfigToJson(this);
+}
 
-// @JsonSerializable()
-// class Field {
-//   String name;
-//   String type;
-//   bool required;
-//   String value;
+@JsonSerializable()
+class Field {
+  String name;
+  String type;
+  bool required;
+  String value;
 
-//   Field(this.name, this.type, this.required, this.value);
+  Field(this.name, this.type, this.required, this.value);
 
-//   /// A necessary factory constructor for creating a new Field instance
-//   /// from a map. Pass the map to the generated `_$FieldToJson()` constructor.
-//   /// The constructor is named after the source class, in this case, Field.
-//   factory Field.fromJson(Map<String, dynamic> json) => _$FieldFromJson(json);
+  /// A necessary factory constructor for creating a new Field instance
+  /// from a map. Pass the map to the generated `_$FieldToJson()` constructor.
+  /// The constructor is named after the source class, in this case, Field.
+  factory Field.fromJson(Map<String, dynamic> json) => _$FieldFromJson(json);
 
-//   /// `toJson` is the convention for a class to declare support for serialization
-//   /// to JSON. The implementation simply calls the private, generated
-//   /// helper method `_$FieldToJson`.
-//   Map<String, dynamic> toJson() => _$FieldToJson(this);
-// }
+  /// `toJson` is the convention for a class to declare support for serialization
+  /// to JSON. The implementation simply calls the private, generated
+  /// helper method `_$FieldToJson`.
+  Map<String, dynamic> toJson() => _$FieldToJson(this);
+}
 
 // @JsonSerializable()
 // class Registration {

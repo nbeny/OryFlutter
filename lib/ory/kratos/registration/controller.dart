@@ -7,45 +7,53 @@ import 'model.dart';
 
 class RegistrationController extends GetxController {
   RxBool isLoading = true.obs;
-  Rx<InitRegistration> initRegistration =
-      InitRegistration('', '', DateTime.now(), DateTime.now(), '', null, {})
-          .obs;
+  Rx<InitRegistration> initRegistration = InitRegistration(
+          '',
+          '',
+          DateTime.now(),
+          DateTime.now(),
+          '',
+          null,
+          Methods(Password('', Config('', '', null))))
+      .obs;
+  Rx<InitRegistration> registrationFlow = InitRegistration(
+          '',
+          '',
+          DateTime.now(),
+          DateTime.now(),
+          '',
+          null,
+          Methods(Password('', Config('', '', null))))
+      .obs;
   Rx<Registration> registration = Registration('', null, null).obs;
 
   @override
   void onInit() {
+    isLoading(true);
     if (kIsWeb) {
-      fetchRegistrationBrowser();
+      fetchInitRegistrationBrowser();
     } else {
-      fetchRegistrationApi();
+      fetchInitRegistrationApi();
     }
+    // fetchRegistrationFlow(initRegistration.value.id);
+    isLoading(false);
     super.onInit();
   }
 
-  void onSubmit(String id, Object body) {
-    postRegistration(id, body);
-  }
-
-  Future<Registration?> postRegistration(String id, Object body) async {
+  Future<InitRegistration?> fetchRegistrationFlow(String id) async {
     try {
-      isLoading(true);
-
-      Registration? result =
-          await RegistrationService.postRegistrationFlow(id, body);
+      InitRegistration? result =
+          await RegistrationService.getRegistrationFlow(id);
       if (result != null) {
-        registration = result.obs;
+        registrationFlow = result.obs;
       }
     } catch (e) {
       throw Exception(e);
-    } finally {
-      isLoading(false);
-    }
+    } finally {}
   }
 
-  void fetchRegistrationApi() async {
+  Future<InitRegistration?> fetchInitRegistrationApi() async {
     try {
-      isLoading(true);
-
       InitRegistration? result =
           await RegistrationService.getInitRegistrationApi();
       if (result != null) {
@@ -53,20 +61,14 @@ class RegistrationController extends GetxController {
       }
     } catch (e) {
       throw Exception(e);
-    } finally {
-      isLoading(false);
-    }
+    } finally {}
   }
 
-  void fetchRegistrationBrowser() async {
+  Future<void> fetchInitRegistrationBrowser() async {
     try {
-      isLoading(true);
-
       await RegistrationService.getInitRegitrationBrowser();
     } catch (e) {
       throw Exception(e);
-    } finally {
-      isLoading(false);
-    }
+    } finally {}
   }
 }

@@ -12,7 +12,7 @@ class HealthAliveService {
     Uri uri = Uri.parse(Ory.HTTP + Ory.URI_ORI_KRATOS + '/health/alive');
     final response = await client.get(
       uri,
-      headers: Ory.HEADERS,
+      headers: Ory.JSON_HEADERS,
     );
 
     try {
@@ -34,7 +34,7 @@ class HealthReadyService {
     Uri uri = Uri.parse(Ory.HTTP + Ory.URI_ORI_KRATOS + '/health/ready');
     final response = await client.get(
       uri,
-      headers: Ory.HEADERS,
+      headers: Ory.JSON_HEADERS,
     );
 
     try {
